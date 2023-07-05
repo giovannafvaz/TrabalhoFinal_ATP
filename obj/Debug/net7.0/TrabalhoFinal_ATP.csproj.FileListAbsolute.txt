@@ -1,0 +1,15 @@
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\obj\Debug\net7.0\TrabalhoFinal_ATP.csproj.AssemblyReference.cache
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\obj\Debug\net7.0\TrabalhoFinal_ATP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\obj\Debug\net7.0\TrabalhoFinal_ATP.AssemblyInfoInputs.cache
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\obj\Debug\net7.0\TrabalhoFinal_ATP.AssemblyInfo.cs
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\obj\Debug\net7.0\TrabalhoFinal_ATP.csproj.CoreCompileInputs.cache
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\bin\Debug\net7.0\TrabalhoFinal_ATP.exe
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\bin\Debug\net7.0\TrabalhoFinal_ATP.deps.json
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\bin\Debug\net7.0\TrabalhoFinal_ATP.runtimeconfig.json
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\bin\Debug\net7.0\TrabalhoFinal_ATP.dll
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\bin\Debug\net7.0\TrabalhoFinal_ATP.pdb
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\obj\Debug\net7.0\TrabalhoFinal_ATP.dll
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\obj\Debug\net7.0\refint\TrabalhoFinal_ATP.dll
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\obj\Debug\net7.0\TrabalhoFinal_ATP.pdb
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\obj\Debug\net7.0\TrabalhoFinal_ATP.genruntimeconfig.cache
+C:\Projetos\Trabalho_Final\TrabalhoFinal_ATP\obj\Debug\net7.0\ref\TrabalhoFinal_ATP.dll
