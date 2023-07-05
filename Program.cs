@@ -14,7 +14,6 @@ class Program
         while (rodar)
         {
             Console.WriteLine("MENU PRINCIPAL");
-            Console.WriteLine("Escolha uma das opções abaixo de acordo com sua necessidade: ");
             Console.WriteLine("1 – Importar arquivo de produtos");
             Console.WriteLine("2 – Registrar venda");
             Console.WriteLine("3 – Relatório de vendas");
@@ -58,18 +57,19 @@ class Program
 
     static void ImportarProdutos()
     {
-        Console.Write("Digite o caminho do arquivo de produtos: ");
+        //Usuário informa o caminho do argquivo program.txt
+        Console.Write("Digite o caminho do arquivo de produtos (escreva 'produtos.txt'): ");
         string caminhoArquivo = Console.ReadLine();
         try
         {
-            //ReadAllLines: lê cada linha do arquivo fornecido e armazena elas em um array de string
+            //ReadAllLines: lê cada linha do arquivo fornecido para armazená-lo em um array de string
             string[] linhas = File.ReadAllLines(caminhoArquivo);
-            /*Cada produto utiliza duas linhas (nome do produto e quantidade em estoque)
-            por isso o número de linhas foi dividido por 2, para obter os produtos*/
             int numProdutos = linhas.Length / 2;
-
+            /*Cada produto ocupa 2 linhas no array (nome do produto e quantidade em estoque), por isso, 
+            e divide por 2 para pegar metade (produtos)*/
             Produtos = new string[numProdutos];// será armazenado os nomes dos produtos
-            //QuantidadeEstoque = new int[numProdutos];// será armazenado a quantidade de produtos
+
+            QuantidadeEstoque = new int[numProdutos];// será armazenado a quantidade de produtos
 
             for (int i = 0; i < numProdutos; i++)
             {
@@ -78,13 +78,13 @@ class Program
             }
 
             // utilizado o for para percorrer as linhas do arquivo importado e armazenar nas variáveis correspondentes
-            VendasDia = new int[30, numProdutos]; // Matriz com o número de produtos e 30 dias (considerando um mês de 30 dias)
-            MesAtual = 0;
 
+            VendasDia = new int[numProdutos, 30]; // Matriz com o número de produtos e 30 dias (considerando um mês de 30 dias)
+            MesAtual = 0;
             Console.WriteLine("Arquivo de produtos importado com sucesso.");
 
         }
-        catch (Exception ex) //tratamento de exceção
+        catch (Exception ex) // tratamento de exceção
         {
             Console.WriteLine("Erro ao importar arquivo de produtos: " + ex.Message);
         }
@@ -209,27 +209,24 @@ class Program
             return;
         }
 
-        Console.Write("Digite o caminho do arquivo de vendas: ");
-        string caminhoArquivo = Console.ReadLine();
-
         //lê a entrada do usuário e armazena o caminho do arquivo em uma variável.
         try
         {
             //criar o arquivo de vendas no caminho especificado.
-            using (StreamWriter writer = new StreamWriter(caminhoArquivo))
+            using (StreamWriter sw = new StreamWriter("vendas.txt"))
             {
                 for (int i = 0; i < Produtos.Length; i++)
                 {
-                    writer.WriteLine(Produtos[i]);
+                    sw.WriteLine(Produtos[i]);
 
                     for (int dia = 1; dia <= 30; dia++)
                     {
-                        writer.WriteLine("Dia {0}: {1}", dia, VendasDia[i, dia - 1]);
+                        sw.WriteLine("Dia {0}: {1}", dia, VendasDia[i, dia - 1]);
                         //escreve no arquivo o número do dia seguido pela quantidade vendida do produto no dia correspondente.
                     }
-                    writer.WriteLine();
+                    sw.WriteLine();
                 }
-                Console.WriteLine("Arquivo de vendas criado com sucesso.");
+                Console.WriteLine("Arquivo de vendas criado com sucesso!");
             }
         }
 
