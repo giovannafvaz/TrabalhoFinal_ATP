@@ -9,11 +9,12 @@ class Program
 
     static void Main()
     {
+        Console.WriteLine("Trabalho Final de ATP - Giovanna Fabíola Vaz");
         bool rodar = true; //Enquanto "rodar" for verdadeiro, o programa continurá rodando. 
 
         while (rodar)
         {
-            Console.WriteLine("MENU PRINCIPAL");
+            Console.WriteLine("---MENU PRINCIPAL---");
             Console.WriteLine("1 – Importar arquivo de produtos");
             Console.WriteLine("2 – Registrar venda");
             Console.WriteLine("3 – Relatório de vendas");
