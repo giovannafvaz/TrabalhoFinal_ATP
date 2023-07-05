@@ -160,7 +160,7 @@ class Program
 
         Console.WriteLine("Relatório de vendas:");
 
-        //for é usado para exibir os números de dia de 1 a 30.
+        //exibe os dias do mês
         Console.Write("{0, -12}", "Produto");
 
         for (int dia = 1; dia <= 30; dia++)
@@ -176,7 +176,7 @@ class Program
 
             for (int dia = 1; dia <= 30; dia++)
             {
-                //exibe a quantidade vendida do produto no dia correspondente
+                //exibe a quantidade de produto vendida no dia 
                 Console.Write("{0, 4}", VendasDia[i, dia - 1]);
             }
 
@@ -191,8 +191,7 @@ class Program
             Console.WriteLine("Não há produtos importados. Importe um arquivo de produtos antes de gerar o relatório de estoque.");
             return;
         }
-        //O loop percorre cada produto no array produtos. Para cada produto,
-        //a linha Console.WriteLine("{0}: {1}", produtos[i], estoque[i]); exibe o nome do produto seguido pelo valor do estoque correspondente.
+        /*O loop percorre os produtos do array e exibe o nome do produto, seguido pela quantidade de produtos no estoque */
 
         Console.WriteLine("Relatório de estoque:");
         for (int i = 0; i < Produtos.Length; i++)
@@ -209,10 +208,10 @@ class Program
             return;
         }
 
-        //lê a entrada do usuário e armazena o caminho do arquivo em uma variável.
+        //lê a entrada do usuário e armazena o caminho do arquivo em uma variável
         try
         {
-            //criar o arquivo de vendas no caminho especificado.
+            //cria o arquivo de vendas no caminho determinado
             using (StreamWriter sw = new StreamWriter("vendas.txt"))
             {
                 for (int i = 0; i < Produtos.Length; i++)
@@ -222,7 +221,7 @@ class Program
                     for (int dia = 1; dia <= 30; dia++)
                     {
                         sw.WriteLine("Dia {0}: {1}", dia, VendasDia[i, dia - 1]);
-                        //escreve no arquivo o número do dia seguido pela quantidade vendida do produto no dia correspondente.
+                        //escreve no arquivo o dia e o número de vendas correspondente a esse dia
                     }
                     sw.WriteLine();
                 }
